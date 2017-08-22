@@ -92,7 +92,10 @@
 			<div class="item"><img src="https://raw.githubusercontent.com/aquasolis/files/master/FCD.jpg" width="1920" height="1080" alt="First Slide"></div>
 			<div class="item"><img src="https://raw.githubusercontent.com/aquasolis/files/master/map.png" width="1920" height="1080" alt="First Slide"></div>
 			<div class="item"><img src="https://raw.githubusercontent.com/aquasolis/files/master/warmerworld.jpg" width="1920" height="1080" alt="First Slide"></div>
-                	<div class="item"><iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/JyzvcrZIuf0?rel=0&amp;showinfo=0&amp;end=176&amp;&iv_load_policy=3" frameborder="0" allowfullscreen></iframe></div>
+                	<!--
+			<div class="item"><iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/JyzvcrZIuf0?rel=0&amp;showinfo=0&amp;end=176&amp;iv_load_policy=3" frameborder="0" allowfullscreen></iframe></div>
+		    -->
+			<div class="item"><div class="youtube-player" data-id="JyzvcrZIuf0"></div></div>
 		    </div>
                 <!-- Carousel nav -->
                 <a class="carousel-control left" href="#carousel" data-slide="prev"><i class="icon-prev fa fa-angle-left"></i></a>
@@ -318,7 +321,16 @@
             <a class="btn btn-warning" href="#page-top">
             <i class="">^</i></a>
         </div>
-        <!-- jQuery -->
+	<!-- Youtube -->
+        <style>
+		.youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;background:#000;margin:5px}.youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;cursor:pointer;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.youtube-player img:hover{-webkit-filter:brightness(75%)}.youtube-player .play{height:72px;width:72px;left:50%;top:50%;margin-left:-36px;margin-top:-36px;position:absolute;background:url(//i.imgur.com/TxzC70f.png) no-repeat;cursor:pointer}
+	</style>
+	<script>
+		function labnolThumb(e){var t='<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',a='<div class="play"></div>';return t.replace("ID",e)+a}function labnolIframe(){var e=document.createElement("iframe"),
+	t="https://www.youtube-nocookie.com/embed/ID?autoplay=1&amp;rel=0&amp;showinfo=0&amp;end=176&amp;iv_load_policy=3";
+		e.setAttribute("src",t.replace("ID",this.dataset.id)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),this.parentNode.replaceChild(e,this)}document.addEventListener("DOMContentLoaded",function(){var e,t,a=document.getElementsByClassName("youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.innerHTML=labnolThumb(a[t].dataset.id),e.onclick=labnolIframe,a[t].appendChild(e)});
+	</script>
+	<!-- jQuery -->
         <script src="js/jquery.js"></script>
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js" async=""></script>
